@@ -1,5 +1,4 @@
-# Méthode de lancement du jeu : Attraper puis glisser le dossier game sur le
-fichier love.exe
+# Méthode de lancement du jeu : Attraper puis glisser le dossier game sur le fichier love.exe
 
 > /!\ Deux fichiers love ont le même nom et la même icone. Mais l'un est une
 application et l'autre une simple image. Il faut faire attention à bien déposer le
