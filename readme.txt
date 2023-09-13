@@ -1,111 +1,21 @@
-LÖVE is an *awesome* framework you can use to make 2D games in Lua. It's free, open-source, and works on Windows, macOS, Linux, Android, and iOS.
+**Méthode de lancement du jeu : Attraper puis glisser le dossier game sur le fichier love.exe![](Aspose.Words.1793a87e-4446-4579-88af-f2551ede7461.001.png)**
 
-[![Build Status: Windows](https://ci.appveyor.com/api/projects/status/chc0hdr08wv1d5c7?svg=true)](https://ci.appveyor.com/project/AlexSzpakowski/love)
-[![Build Status: Github CI](https://github.com/love2d/love/workflows/continuous-integration/badge.svg)](https://github.com/love2d/love/actions?query=workflow%3Acontinuous-integration)
+/!\ Deux fichiers love ont le même nom et la même icone. Mais l'un est une application et l'autre une simple image. Il faut faire attention à bien déposer le dossier game sur l'application et pas sur l'image.
 
-Documentation
--------------
+Une fois le jeu lancé, il est conseillé de le mettre en plein écran.
 
-We use our [wiki][wiki] for documentation.
-If you need further help, feel free to ask on our [forums][forums], our [Discord server][discord], or our IRC channel [#love on OFTC][irc].
+- Mon œuvre est sous la forme d'un petit jeux vidéo en deux dimensions. Un petit monde virtuel ou le spectateur est invité à se promener librement dans mon autoportrait. Cet aspect interactif et le fait qu'il sois projeté sur le mur apporte la dimension spectaculaire a œuvre.
+  - Le jeu comporte 6 différentes salles. Chaque salle symbolise une part de ma personnalité. Le spectateur est représenté par un petit fantôme, comme s'il était un explorateur qui irait découvrir mon esprit. Le spectateur est guidé grâce à la lumière et a la musique vers la porte qui l'amènera à la salle suivante. Même s'il s'agit de mon autoportrait, l'œuvre reste suffisamment abstraite pour devenir l'autoportrait de n'importe qu'elle personne.
+    - Dans la première salle, le spectateur est plongé dans le noir, seul la lueur des lampadaires et de la musique qui se fait de plus en plus forte lui permette de trouver l'entrée de la deuxième salle. Elle représente un entre deux : on quitte le monde réelle pour se glisser dans l'esprit humain.
+      - La seconde salle est la représentation de mon image dans les réseaux sociaux. On vois des fantômes ou des âmes qui regardent des écrans blancs, vides. Toutes ces créatures sont reliées par des lignes, pour renvoyer à l'idées des réseaux sociaux, ou tout le monde est connectés.
+        - La troisième salle est la représentation de mon côté créatif. On retrouve ces mêmes fantômes, admirant des statuts. Les statuts représentent mes créations, que je partage et aime partager en ligne.
+          - Dans la quatrième salle se trouve simplement des citations de mes livres préférés, on y trouve des citations de Terra Ignota, Dune, Nous somme bob 1, La faucheuse.
+            - La quatrième salle est une sorte de labyrinthe. Le spectateur est descendu encore plus profondément dans mon esprit. On quitte définitivement internet, qui n'offrait qu'une qu'une image vide et artificiel. Le labyrinthe représente la complexité du cerveau humain.
+              - Dans la dernière salle, le spectateur est dans une foret. Elle symbolise l'évolution de la personnalité. Comme la foret, notre identité est toujours en mouvement, en évolution, en fonction de nos nouvelles rencontres ou 
 
-Repository
-----------
+expérience. Notre identité n'est qu'un mélanges d'infime partie de l'identité des autres. C'est pourquoi il est si difficile de la figé dans un autoportrait.
 
-We use the 'main' branch for patch development of the current major release, and therefore it should not be considered stable.
-There may also be a branch for the next major version in development, which is named after that version.
-
-We tag all our releases (since we started using mercurial and git), and have binary downloads available for them.
-
-Experimental changes are developed in a separate [love-experiments][love-experiments] repository.
-
-Builds
-------
-
-Files for releases are in the [releases][releases] section on GitHub. [The site][site] has links to files and additional platform content for the latest release.
-
-There are also unstable/nightly builds:
-
-- Builds for some platforms are automatically created after each commit and are available through GitHub's CI interfaces.
-- For ubuntu linux they are in [ppa:bartbes/love-unstable][unstableppa]
-- For arch linux there's [love-git][aur] in the AUR.
-
-Contributing
-------------
-
-The best places to contribute are through the issue tracker and the official Discord server or IRC channel.
-
-For code contributions, pull requests and patches are welcome. Be sure to read the [source code style guide][codestyle].
-Changes and new features typically get discussed in the issue tracker or on Discord or the forums before a pull request is made.
-
-Compilation
------------
-
-### Windows
-Follow the instructions at the [megasource][megasource] repository page.
-
-### *nix
-Run `platform/unix/automagic` from the repository root, then run ./configure and make.
-
-	$ platform/unix/automagic
-	$ ./configure
-	$ make
-
-When using a source release, automagic has already been run, and the first step can be skipped.
-
-### macOS
-Download or clone [this repository][dependencies-apple] and copy, move, or symlink the `macOS/Frameworks` subfolder into love's `platform/xcode/macosx` folder.
-
-Then use the Xcode project found at `platform/xcode/love.xcodeproj` to build the `love-macosx` target.
-
-### iOS
-Building for iOS requires macOS and Xcode.
-
-#### LÖVE 11.4 and newer
-Download the `love-apple-dependencies` zip file corresponding to the LÖVE version being used from the [Releases page][dependencies-ios],
-unzip it, and place the `iOS/libraries` subfolder into love's `platform/xcode/ios` folder.
-
-Or, download or clone [this repository][dependencies-apple] and copy, move, or symlink the `iOS/libraries` subfolder into love's `platform/xcode/ios` folder.
-
-Then use the Xcode project found at `platform/xcode/love.xcodeproj` to build the `love-ios` target.
-
-See `readme-iOS.rtf` for more information.
-
-#### LÖVE 11.3 and older
-Download the `ios-libraries` zip file corresponding to the LÖVE version being used from the [Releases page][dependencies-ios],
-unzip it, and place the `include` and `libraries` subfolders into love's `platform/xcode/ios` folder.
-
-Then use the Xcode project found at `platform/xcode/love.xcodeproj` to build the `love-ios` target.
-
-See `readme-iOS.rtf` for more information.
-
-### Android
-Visit the [Android build repository][android-repository] for build instructions.
-
-Dependencies
-------------
-
-- SDL2
-- OpenGL 2.1+ / OpenGL ES 2+
-- OpenAL
-- Lua / LuaJIT / LLVM-lua
-- FreeType
-- ModPlug
-- mpg123
-- Vorbisfile
-- Theora
-
-[site]: https://love2d.org
-[wiki]: https://love2d.org/wiki
-[forums]: https://love2d.org/forums
-[discord]: https://discord.gg/rhUets9
-[irc]: irc://irc.oftc.net/love
-[dependencies-apple]: https://github.com/love2d/love-apple-dependencies
-[dependencies-ios]: https://github.com/love2d/love/releases
-[megasource]: https://github.com/love2d/megasource
-[unstableppa]: https://launchpad.net/~bartbes/+archive/love-unstable
-[aur]: https://aur.archlinux.org/packages/love-git
-[love-experiments]: https://github.com/slime73/love-experiments
-[codestyle]: https://love2d.org/wiki/Code_Style
-[android-repository]: https://github.com/love2d/love-android
-[releases]: https://github.com/love2d/love/releases
+- Pour réaliser cette œuvre, j'ai voulu sortir de ma zone de confort et essayer de techniques nouvelles. J'ai dessiné chaque salle à la tablette graphique, que je n'avais encore jamais utilisé. (uniquement pour jouer a des jeux). Je suis parti d'un fond noir, et je suis venue appliquer des couches de blanc. Le but était de travailler avec les ombres et les lumières. Le résultat finale est un peu morbide mais ce n'était pas le but au départ. Je voulais juste jouer avec la lumière. Le côté flou du fusain permet de faire un contraste avec le côté très cubique des jeux vidéos en pixel art. Il permet aussi de faire un autre contraste avec la réalité, et d'insister sur le fait que l'espace d'un instant, le spectateur quitte le monde réel.
+  - Le fait de projeter mon œuvre sur le mur, de permettre au spectateur de se déplacer lui même dans cette œuvre, comme si œuvre était elle même une sale de musée, donne cette aspect spectaculaire. 
+    - J'aurais put améliorer l'animation du personnages qui représente le spectateur. Peut être aussi l'animation de certaines salles, cela donnerais un aspect plus vivant, même si on perdrait le côté figé dans le temps.
+      - Si mon œuvre était exposé, le mieux serait de la projeté sur un mur noir. Une manette serait à disposition pour que le spectateur puisse déplacer le fantôme.
